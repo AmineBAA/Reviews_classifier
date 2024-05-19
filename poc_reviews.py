@@ -11,6 +11,12 @@ import streamlit as st
 import pandas as pd
 import pickle
 
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from keras.utils import to_categorical
+from sklearn.preprocessing import LabelEncoder
+
+
 # Load your trained model
 model, data_processing = pickle.load(open('review_classifier.pkl', 'rb'))
 
