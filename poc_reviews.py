@@ -10,7 +10,8 @@ Original file is located at
 import streamlit as st
 import pandas as pd
 import pickle
-import tensorflow.keras
+import tensorflow
+import keras
 import pickle_utils
 
 from sklearn.preprocessing import LabelEncoder
