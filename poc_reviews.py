@@ -11,12 +11,13 @@ import streamlit as st
 import pandas as pd
 import pickle
 import tensorflow.keras
+import pickle_utils
 
 from sklearn.preprocessing import LabelEncoder
 
 
 # Load your trained model
-model, data_processing = pickle.load(open('review_classifier.pkl', 'rb'))
+model, data_processing = pickle_utils.load_from_pickle(open('review_classifier.pkl', 'rb'))
 
 st.title('Reviews Classification Tool')
 
