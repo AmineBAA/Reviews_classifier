@@ -23,7 +23,7 @@ model, data_processing = pickle.load(open('../Reviews_classifier/review_classifi
 st.title('Reviews Classification Tool')
 
 # File uploader
-uploaded_file = st.file_uploader("Choose an Excel file", type=['csv'])
+uploaded_file = st.file_uploader("Choose an Excel file", type=['xlsx'])
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
     X_val=data_processing(df)
