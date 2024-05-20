@@ -15,7 +15,7 @@ from sklearn.preprocessing import LabelEncoder
 
 
 # Load your trained model
-model, data_processing = pickle.load(open('../Reviews_classifier/review_classifier.pkl', 'rb'))
+model, data_processing = pickle.load(open('review_classifier.pkl', 'rb'))
 
 st.title('Reviews Classification Tool')
 
