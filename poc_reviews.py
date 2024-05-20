@@ -25,7 +25,7 @@ st.title('Reviews Classification Tool')
 # File uploader
 uploaded_file = st.file_uploader("Choose an Excel file", type=['xlsx'])
 if uploaded_file is not None:
-    df = pd.read_csv(uploaded_file)
+    df = pd.read_excel(uploaded_file)
     X_val=data_processing(df)
     Y_Positive=model.predict(X_val)[:,0]
     Y_Neutral=model.predict(X_val)[:,1]
