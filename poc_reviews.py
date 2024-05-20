@@ -13,12 +13,15 @@ import pickle
 import tensorflow
 import keras
 import pickle_utils
+from tensorflow.keras.models import load_model
+
+
 
 from sklearn.preprocessing import LabelEncoder
 
 
-# Load your trained model
-model, data_processing = pickle_utils.load_from_pickle(open('review_classifier.pkl'))
+# Load the model from the file
+loaded_model = load_model('review_model.h5')
 
 st.title('Reviews Classification Tool')
 
